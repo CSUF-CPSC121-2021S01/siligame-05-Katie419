@@ -129,10 +129,9 @@ std::unique_ptr<class OpponentProjectile> Opponent::LaunchProjectile() {
   std::unique_ptr<OpponentProjectile> projectiles;
   // it should return either nullptr or std::unique_ptr
   if (count < 5) {
-    count = count + 1;
+    count++;
     return nullptr;
   } else {
-    count = 0;
     projectiles = std::make_unique<OpponentProjectile>(GetX(), GetY() + 5);
     std::unique_ptr<OpponentProjectile> projectiles;
     return projectiles;
